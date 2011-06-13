@@ -3,7 +3,7 @@
 //  echoprint
 //
 //  Created by Brian Whitman on 6/13/11.
-//  Copyright 2011 __MyCompanyName__. All rights reserved.
+//  Copyright 2011 The Echo Nest. All rights reserved.
 //
 
 #import "echoprintViewController.h"
@@ -31,7 +31,7 @@ extern const char * GetPCMFromFile(char * filename);
 		NSArray *paths = NSSearchPathForDirectoriesInDomains(NSDocumentDirectory, NSUserDomainMask, YES);
 		NSString *documentsDirectory = [paths objectAtIndex:0];
 
-		NSURL* destinationURL = [NSURL fileURLWithPath:[documentsDirectory stringByAppendingPathComponent:@"temp_data"]]; //file URL for the location you'd like to import the asset to.
+		NSURL* destinationURL = [NSURL fileURLWithPath:[documentsDirectory stringByAppendingPathComponent:@"temp_data"]];
 		[[NSFileManager defaultManager] removeItemAtURL:destinationURL error:nil];
 		TSLibraryImport* import = [[TSLibraryImport alloc] init];
 		[import importAsset:assetURL toURL:destinationURL completionBlock:^(TSLibraryImport* import) {
@@ -49,7 +49,7 @@ extern const char * GetPCMFromFile(char * filename);
 
 - (void) getSong: (const char*) fpCode {
 	NSLog(@"Done %s", fpCode);
-	NSURL *url = [NSURL URLWithString:[NSString stringWithFormat:@"http://bleeding-edge.sandpit.us/api/v4/song/identify?api_key=5EYHYOVNFLJTJ1KOH&version=4.10&code=%s", fpCode]];
+	NSURL *url = [NSURL URLWithString:[NSString stringWithFormat:@"http://developer.echonest.com/api/v4/song/identify?api_key=%@&version=4.10&code=%s", API_KEY, fpCode]];
 	ASIHTTPRequest * request = [ASIHTTPRequest requestWithURL:url];
 	[request setAllowCompressedResponse:NO];
 	[request startSynchronous];
@@ -63,18 +63,12 @@ extern const char * GetPCMFromFile(char * filename);
 			NSString * song_title = [[songList objectAtIndex:0] objectForKey:@"title"];
 			NSString * artist_name = [[songList objectAtIndex:0] objectForKey:@"artist_name"];
 			NSLog(@"%@", [NSString stringWithFormat:@"%@ - %@", artist_name, song_title]);
-			//[elapsedLabel setText:[NSString stringWithFormat:@"%@ - %@", artist_name, song_title]];
 		} else {
 			NSLog(@"No match");
-			//[elapsedLabel setText:@"no matches"];
 		}
 	} else {
 		NSLog(@"error: %@", error);
 	}
-	
-	//[elapsedLabel setNeedsDisplay];
-	[self.view setNeedsDisplay];
-	
 }
 
 

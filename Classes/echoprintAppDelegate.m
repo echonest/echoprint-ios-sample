@@ -3,7 +3,7 @@
 //  echoprint
 //
 //  Created by Brian Whitman on 6/13/11.
-//  Copyright 2011 __MyCompanyName__. All rights reserved.
+//  Copyright 2011 The Echo Nest. All rights reserved.
 //
 
 #import "echoprintAppDelegate.h"

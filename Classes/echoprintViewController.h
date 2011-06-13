@@ -3,7 +3,7 @@
 //  echoprint
 //
 //  Created by Brian Whitman on 6/13/11.
-//  Copyright 2011 __MyCompanyName__. All rights reserved.
+//  Copyright 2011 The Echo Nest. All rights reserved.
 //
 
 #import <UIKit/UIKit.h>
@@ -13,6 +13,9 @@
 #import "ASIFormDataRequest.h"
 #import "JSON.h"
 #import "TSLibraryImport.h"
+
+// developer.echonest.com
+#define API_KEY GO_GET_ONE
 
 @interface echoprintViewController : UIViewController <MPMediaPickerControllerDelegate> {
 

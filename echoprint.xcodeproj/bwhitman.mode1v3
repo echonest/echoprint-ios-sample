@@ -229,6 +229,8 @@
 			<key>Layout</key>
 			<array>
 				<dict>
+					<key>BecomeActive</key>
+					<true/>
 					<key>ContentConfiguration</key>
 					<dict>
 						<key>PBXBottomSmartGroupGIDs</key>
@@ -271,7 +273,7 @@
 							<key>PBXSmartGroupTreeModuleOutlineStateSelectionKey</key>
 							<array>
 								<array>
-									<integer>2</integer>
+									<integer>4</integer>
 									<integer>1</integer>
 									<integer>0</integer>
 								</array>
@@ -307,14 +309,12 @@
 					<key>Dock</key>
 					<array>
 						<dict>
-							<key>BecomeActive</key>
-							<true/>
 							<key>ContentConfiguration</key>
 							<dict>
 								<key>PBXProjectModuleGUID</key>
 								<string>1CE0B20306471E060097A5F4</string>
 								<key>PBXProjectModuleLabel</key>
-								<string>ASIHTTPRequest.m</string>
+								<string>TSLibraryImport.m</string>
 								<key>PBXSplitModuleInNavigatorKey</key>
 								<dict>
 									<key>Split0</key>
@@ -322,11 +322,11 @@
 										<key>PBXProjectModuleGUID</key>
 										<string>1CE0B20406471E060097A5F4</string>
 										<key>PBXProjectModuleLabel</key>
-										<string>ASIHTTPRequest.m</string>
+										<string>TSLibraryImport.m</string>
 										<key>_historyCapacity</key>
 										<integer>0</integer>
 										<key>bookmark</key>
-										<string>9AC88ADF13A6B222002C92D4</string>
+										<string>9AC88AEE13A6B408002C92D4</string>
 										<key>history</key>
 										<array>
 											<string>9AC889B613A69926002C92D4</string>
@@ -335,13 +335,16 @@
 											<string>9AC889D713A69BF9002C92D4</string>
 											<string>9AC889D813A69BF9002C92D4</string>
 											<string>9AC889D913A69BF9002C92D4</string>
-											<string>9AC88A0913A6A5FC002C92D4</string>
 											<string>9AC88A9F13A6AE9D002C92D4</string>
-											<string>9AC88AA013A6AE9D002C92D4</string>
-											<string>9AC88AA113A6AE9D002C92D4</string>
+											<string>9AC88AE613A6B408002C92D4</string>
+											<string>9AC88AE713A6B408002C92D4</string>
+											<string>9AC88AE813A6B408002C92D4</string>
+											<string>9AC88AE913A6B408002C92D4</string>
+											<string>9AC88AEA13A6B408002C92D4</string>
+											<string>9AC88AEB13A6B408002C92D4</string>
+											<string>9AC88AEC13A6B408002C92D4</string>
+											<string>9AC88AED13A6B408002C92D4</string>
 											<string>9AC88AB513A6B004002C92D4</string>
-											<string>9AC88ADD13A6B222002C92D4</string>
-											<string>9AC88ADE13A6B222002C92D4</string>
 										</array>
 									</dict>
 									<key>SplitCount</key>
