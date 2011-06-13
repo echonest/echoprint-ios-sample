@@ -23,7 +23,7 @@
 	28D7ACF70DDB3853001CB0EB /* echoprintViewController.m */ = {
 		uiCtxt = {
 			sepNavIntBoundsRect = "{{0, 0}, {1116, 1680}}";
-			sepNavSelRange = "{807, 0}";
+			sepNavSelRange = "{153, 0}";
 			sepNavVisRange = "{47, 1917}";
 		};
 	};
@@ -145,6 +145,12 @@
 			9AC88ABC13A6B05D002C92D4 /* PBXTextBookmark */ = 9AC88ABC13A6B05D002C92D4 /* PBXTextBookmark */;
 			9AC88ABE13A6B0A3002C92D4 /* PBXTextBookmark */ = 9AC88ABE13A6B0A3002C92D4 /* PBXTextBookmark */;
 			9AC88ABF13A6B0A5002C92D4 /* PBXTextBookmark */ = 9AC88ABF13A6B0A5002C92D4 /* PBXTextBookmark */;
+			9AC88ADA13A6B221002C92D4 /* PBXTextBookmark */ = 9AC88ADA13A6B221002C92D4 /* PBXTextBookmark */;
+			9AC88ADB13A6B221002C92D4 /* XCBuildMessageTextBookmark */ = 9AC88ADB13A6B221002C92D4 /* XCBuildMessageTextBookmark */;
+			9AC88ADC13A6B221002C92D4 /* PBXTextBookmark */ = 9AC88ADC13A6B221002C92D4 /* PBXTextBookmark */;
+			9AC88ADD13A6B222002C92D4 /* PBXTextBookmark */ = 9AC88ADD13A6B222002C92D4 /* PBXTextBookmark */;
+			9AC88ADE13A6B222002C92D4 /* XCBuildMessageTextBookmark */ = 9AC88ADE13A6B222002C92D4 /* XCBuildMessageTextBookmark */;
+			9AC88ADF13A6B222002C92D4 /* PBXTextBookmark */ = 9AC88ADF13A6B222002C92D4 /* PBXTextBookmark */;
 		};
 		sourceControlManager = 9AC8896213A69803002C92D4 /* Source Control */;
 		userBuildSettings = {
@@ -822,5 +828,70 @@
 		rType = 0;
 		vrLen = 1917;
 		vrLoc = 47;
+	};
+	9AC88ACA13A6B20E002C92D4 /* ASIHTTPRequest.m */ = {
+		uiCtxt = {
+			sepNavIntBoundsRect = "{{0, 0}, {1014, 56784}}";
+			sepNavSelRange = "{437, 0}";
+			sepNavVisRange = "{0, 1506}";
+		};
+	};
+	9AC88ADA13A6B221002C92D4 /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 28D7ACF70DDB3853001CB0EB /* echoprintViewController.m */;
+		name = "echoprintViewController.m: 11";
+		rLen = 0;
+		rLoc = 243;
+		rType = 0;
+		vrLen = 1502;
+		vrLoc = 1628;
+	};
+	9AC88ADB13A6B221002C92D4 /* XCBuildMessageTextBookmark */ = {
+		isa = PBXTextBookmark;
+		comments = "Reachability.h: No such file or directory";
+		fRef = 9AC88ACA13A6B20E002C92D4 /* ASIHTTPRequest.m */;
+		fallbackIsa = XCBuildMessageTextBookmark;
+		rLen = 1;
+		rLoc = 15;
+		rType = 1;
+	};
+	9AC88ADC13A6B221002C92D4 /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 9AC88ACA13A6B20E002C92D4 /* ASIHTTPRequest.m */;
+		name = "ASIHTTPRequest.m: 17";
+		rLen = 0;
+		rLoc = 462;
+		rType = 0;
+		vrLen = 1050;
+		vrLoc = 0;
+	};
+	9AC88ADD13A6B222002C92D4 /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 28D7ACF70DDB3853001CB0EB /* echoprintViewController.m */;
+		name = "echoprintViewController.m: 8";
+		rLen = 0;
+		rLoc = 153;
+		rType = 0;
+		vrLen = 1917;
+		vrLoc = 47;
+	};
+	9AC88ADE13A6B222002C92D4 /* XCBuildMessageTextBookmark */ = {
+		isa = PBXTextBookmark;
+		comments = "Reachability.h: No such file or directory";
+		fRef = 9AC88ACA13A6B20E002C92D4 /* ASIHTTPRequest.m */;
+		fallbackIsa = XCBuildMessageTextBookmark;
+		rLen = 1;
+		rLoc = 15;
+		rType = 1;
+	};
+	9AC88ADF13A6B222002C92D4 /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 9AC88ACA13A6B20E002C92D4 /* ASIHTTPRequest.m */;
+		name = "ASIHTTPRequest.m: 16";
+		rLen = 0;
+		rLoc = 437;
+		rType = 0;
+		vrLen = 1506;
+		vrLoc = 0;
 	};
 }

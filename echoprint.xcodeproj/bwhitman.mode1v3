@@ -271,7 +271,9 @@
 							<key>PBXSmartGroupTreeModuleOutlineStateSelectionKey</key>
 							<array>
 								<array>
-									<integer>19</integer>
+									<integer>2</integer>
+									<integer>1</integer>
+									<integer>0</integer>
 								</array>
 							</array>
 							<key>PBXSmartGroupTreeModuleOutlineStateVisibleRectKey</key>
@@ -312,7 +314,7 @@
 								<key>PBXProjectModuleGUID</key>
 								<string>1CE0B20306471E060097A5F4</string>
 								<key>PBXProjectModuleLabel</key>
-								<string>echoprintViewController.m</string>
+								<string>ASIHTTPRequest.m</string>
 								<key>PBXSplitModuleInNavigatorKey</key>
 								<dict>
 									<key>Split0</key>
@@ -320,11 +322,11 @@
 										<key>PBXProjectModuleGUID</key>
 										<string>1CE0B20406471E060097A5F4</string>
 										<key>PBXProjectModuleLabel</key>
-										<string>echoprintViewController.m</string>
+										<string>ASIHTTPRequest.m</string>
 										<key>_historyCapacity</key>
 										<integer>0</integer>
 										<key>bookmark</key>
-										<string>9AC88ABF13A6B0A5002C92D4</string>
+										<string>9AC88ADF13A6B222002C92D4</string>
 										<key>history</key>
 										<array>
 											<string>9AC889B613A69926002C92D4</string>
@@ -338,7 +340,8 @@
 											<string>9AC88AA013A6AE9D002C92D4</string>
 											<string>9AC88AA113A6AE9D002C92D4</string>
 											<string>9AC88AB513A6B004002C92D4</string>
-											<string>9AC88AA213A6AE9D002C92D4</string>
+											<string>9AC88ADD13A6B222002C92D4</string>
+											<string>9AC88ADE13A6B222002C92D4</string>
 										</array>
 									</dict>
 									<key>SplitCount</key>
@@ -560,12 +563,14 @@
 					<key>Dock</key>
 					<array>
 						<dict>
+							<key>BecomeActive</key>
+							<true/>
 							<key>ContentConfiguration</key>
 							<dict>
 								<key>PBXProjectModuleGUID</key>
 								<string>1CD0528F0623707200166675</string>
 								<key>PBXProjectModuleLabel</key>
-								<string>echoprintViewController.m</string>
+								<string>ASIHTTPRequest.m</string>
 								<key>StatusBarVisibility</key>
 								<true/>
 							</dict>
@@ -574,7 +579,7 @@
 								<key>Frame</key>
 								<string>{{0, 0}, {1265, 488}}</string>
 								<key>RubberWindowFrame</key>
-								<string>430 200 1265 770 0 0 1920 1178 </string>
+								<string>744 -56 1265 770 0 0 1920 1178 </string>
 							</dict>
 							<key>Module</key>
 							<string>PBXNavigatorGroup</string>
@@ -582,8 +587,6 @@
 							<string>488pt</string>
 						</dict>
 						<dict>
-							<key>BecomeActive</key>
-							<true/>
 							<key>ContentConfiguration</key>
 							<dict>
 								<key>PBXProjectModuleGUID</key>
@@ -600,7 +603,7 @@
 								<key>Frame</key>
 								<string>{{0, 493}, {1265, 236}}</string>
 								<key>RubberWindowFrame</key>
-								<string>430 200 1265 770 0 0 1920 1178 </string>
+								<string>744 -56 1265 770 0 0 1920 1178 </string>
 							</dict>
 							<key>Module</key>
 							<string>PBXBuildResultsModule</string>
@@ -632,7 +635,7 @@
 			<key>WindowContentMinSize</key>
 			<string>486 300</string>
 			<key>WindowString</key>
-			<string>430 200 1265 770 0 0 1920 1178 </string>
+			<string>744 -56 1265 770 0 0 1920 1178 </string>
 			<key>WindowToolGUID</key>
 			<string>9AC8897A13A6984C002C92D4</string>
 			<key>WindowToolIsVisible</key>
