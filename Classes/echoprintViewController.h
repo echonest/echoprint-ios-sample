@@ -15,7 +15,7 @@
 #import "TSLibraryImport.h"
 
 // developer.echonest.com
-#define API_KEY GO_GET_ONE
+#define API_KEY @"GO_GET_ONE"
 
 @interface echoprintViewController : UIViewController <MPMediaPickerControllerDelegate> {
 
