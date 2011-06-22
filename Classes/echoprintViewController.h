@@ -16,7 +16,7 @@
 #import "MicrophoneInput.h"
 
 // developer.echonest.com
-#define API_KEY @"5EYHYOVNFLJTJ1KOH"
+#define API_KEY @"GET_YOUR_OWN"
 #define API_HOST @"developer.echonest.com"
 
 @interface echoprintViewController : UIViewController <MPMediaPickerControllerDelegate> {
