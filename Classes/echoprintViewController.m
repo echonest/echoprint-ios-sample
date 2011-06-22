@@ -20,9 +20,32 @@ extern const char * GetPCMFromFile(char * filename);
 	[self presentModalViewController:mediaPicker animated:YES];
 	
 }
-- (IBAction)startMicrophone:(id)sender {
-	NSLog(@"Start Microphone");
+- (IBAction) startMicrophone:(id)sender {
+	if(recording) {
+		recording = NO;
+		[recorder stopRecording];
+		[recordButton setTitle:@"Record" forState:UIControlStateNormal];
+		NSArray *paths = NSSearchPathForDirectoriesInDomains(NSDocumentDirectory, NSUserDomainMask, YES);
+		NSString *documentsDirectory = [paths objectAtIndex:0];
+		NSString *filePath =[documentsDirectory stringByAppendingPathComponent:@"output.caf"];
+		[statusLine setText:@"analysing..."];
+		[statusLine setNeedsDisplay];
+		[self.view setNeedsDisplay];
+		const char * fpCode = GetPCMFromFile((char*) [filePath cStringUsingEncoding:NSASCIIStringEncoding]);
+        [self getSong:fpCode];
+	} else {
+		[statusLine setText:@"recording..."];
+		recording = YES;
+		[recordButton setTitle:@"Stop" forState:UIControlStateNormal];
+		[recorder startRecording];
+		[statusLine setNeedsDisplay];
+		[self.view setNeedsDisplay];
+	}
+	NSLog(@"what");
+
 }
+
+
 - (void)mediaPicker:(MPMediaPickerController *)mediaPicker 
   didPickMediaItems:(MPMediaItemCollection *)mediaItemCollection {
 	[self dismissModalViewControllerAnimated:YES];
@@ -41,7 +64,10 @@ extern const char * GetPCMFromFile(char * filename);
 			//TSLibraryImport
 			NSString *outPath = [documentsDirectory stringByAppendingPathComponent:@"temp_data"];
 			NSLog(@"done now. %@", outPath);
+			[statusLine setText:@"analysing..."];
 			const char * fpCode = GetPCMFromFile((char*) [outPath  cStringUsingEncoding:NSASCIIStringEncoding]);
+			[statusLine setNeedsDisplay];
+			[self.view setNeedsDisplay];
 			[self getSong:fpCode];
 		}];
 		
@@ -51,7 +77,7 @@ extern const char * GetPCMFromFile(char * filename);
 
 - (void) getSong: (const char*) fpCode {
 	NSLog(@"Done %s", fpCode);
-	NSURL *url = [NSURL URLWithString:[NSString stringWithFormat:@"http://developer.echonest.com/api/v4/song/identify?api_key=%@&version=4.10&code=%s", API_KEY, fpCode]];
+	NSURL *url = [NSURL URLWithString:[NSString stringWithFormat:@"http://%@/api/v4/song/identify?api_key=%@&version=4.10&code=%s", API_HOST, API_KEY, fpCode]];
 	ASIHTTPRequest * request = [ASIHTTPRequest requestWithURL:url];
 	[request setAllowCompressedResponse:NO];
 	[request startSynchronous];
@@ -64,13 +90,16 @@ extern const char * GetPCMFromFile(char * filename);
 		if([songList count]>0) {
 			NSString * song_title = [[songList objectAtIndex:0] objectForKey:@"title"];
 			NSString * artist_name = [[songList objectAtIndex:0] objectForKey:@"artist_name"];
-			NSLog(@"%@", [NSString stringWithFormat:@"%@ - %@", artist_name, song_title]);
+			[statusLine setText:[NSString stringWithFormat:@"%@ - %@", artist_name, song_title]];
 		} else {
-			NSLog(@"No match");
+			[statusLine setText:@"no match"];
 		}
 	} else {
+		[statusLine setText:@"some error"];
 		NSLog(@"error: %@", error);
 	}
+	[statusLine setNeedsDisplay];
+	[self.view setNeedsDisplay];
 }
 
 
@@ -97,12 +126,12 @@ extern const char * GetPCMFromFile(char * filename);
 */
 
 
-/*
 // Implement viewDidLoad to do additional setup after loading the view, typically from a nib.
 - (void)viewDidLoad {
     [super viewDidLoad];
+	recorder = [[MicrophoneInput alloc] init];
+	recording = NO;
 }
-*/
 
 
 /*

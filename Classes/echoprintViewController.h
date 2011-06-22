@@ -13,11 +13,17 @@
 #import "ASIFormDataRequest.h"
 #import "JSON.h"
 #import "TSLibraryImport.h"
+#import "MicrophoneInput.h"
 
 // developer.echonest.com
-#define API_KEY @"GO_GET_ONE"
+#define API_KEY @"5EYHYOVNFLJTJ1KOH"
+#define API_HOST @"developer.echonest.com"
 
 @interface echoprintViewController : UIViewController <MPMediaPickerControllerDelegate> {
+	BOOL recording;
+	IBOutlet UIButton* recordButton;
+	IBOutlet UILabel* statusLine;
+	MicrophoneInput* recorder;
 
 }
 

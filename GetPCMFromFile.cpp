@@ -36,7 +36,7 @@ const char * GetPCMFromFile(char * filename) {
 	if (err) 
 		NSLog(CFSTR("err on set format %d"), err);
 	
-	int seconds_to_decode = 20;
+	int seconds_to_decode = 30;
 	int bytes_for_bigbuf = sizeof(float)*11025*seconds_to_decode;
 	float *bigBuf = (float*) malloc(bytes_for_bigbuf);
 	if(bigBuf == NULL) {
