@@ -77,7 +77,7 @@ extern const char * GetPCMFromFile(char * filename);
 
 - (void) getSong: (const char*) fpCode {
 	NSLog(@"Done %s", fpCode);
-	NSURL *url = [NSURL URLWithString:[NSString stringWithFormat:@"http://%@/api/v4/song/identify?api_key=%@&version=4.10&code=%s", API_HOST, API_KEY, fpCode]];
+	NSURL *url = [NSURL URLWithString:[NSString stringWithFormat:@"http://%@/api/v4/song/identify?api_key=%@&version=4.11&code=%s", API_HOST, API_KEY, fpCode]];
 	ASIHTTPRequest * request = [ASIHTTPRequest requestWithURL:url];
 	[request setAllowCompressedResponse:NO];
 	[request startSynchronous];
